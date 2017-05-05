@@ -5,21 +5,26 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width" />
-    <title><?php bloginfo('description');?> | <?php bloginfo('name');?> | Seattle, WA</title>
+    <title>
+        <?php bloginfo('description');?> |
+        <?php bloginfo('name');?> | Seattle, WA</title>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="js/script.js"<?php bloginfo('template_directory');?>></script>
-   
+    <script src="js/script.js" <?php bloginfo( 'template_directory');?>
+        >
+    </script>
+
     <!--WP Style Sheets-->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>" />
-    
+
 </head>
-    
+
 <!--WP Header Function-->
 <?php wp_head(); ?>
-    
-    <!--WP Body-->
+
+<!--WP Body-->
+
 <body <?php body_class();?>>
-    
+
     <div class="wrapper">
         <header>
             <a class="logo" id="logo" title="Lake Cavanaugh" href="http://www.jeaninemars.com/web170/wordpress/"><span>Lake Cavanaugh Community</span></a>
@@ -29,14 +34,14 @@
             </div>
         </header>
 
-         <nav>
+        <nav>
             <ul class="topnav" id="myTopnav">
                 <li>
                     <a href="home.html">Home</a>
                 </li>
                 <li>
                     <a href="main.html">Improvement Association</a>
-                </li>   
+                </li>
                 <li>
                     <a href="blog.html">Blog</a>
                 </li>
@@ -48,24 +53,28 @@
         </nav>
 
         <!--START LEFT COL -->
-        
+
 
         <section class="other">
-       
-            
-            
+
+
+
             <!--WP Loop-->
-            
+
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                    
-                    
-                    <?php the_content(); ?>
-               
-            
+
+            <h2>
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_title(); ?>
+                </a>
+            </h2>
+
+
+            <?php the_content(); ?>
+
+
             <?php endwhile; endif; ?>
-            
+
             <small>index.php</small>
         </section>
         <!--END LEFT COL -->
@@ -99,7 +108,7 @@
             </p>
         </footer>
         <!-- END Footer -->
-        
+
         <script>
             /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
             function myFunction() {
@@ -112,10 +121,10 @@
             }
         </script>
     </div>
-    
+
     <!--WP Foooter Function-->
     <?php wp_footer();?>
-    
+
 </body>
 
 </html>
