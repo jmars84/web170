@@ -26,7 +26,7 @@
 
             <?php endwhile; endif; ?>
 
-            <small>index.php</small>
+            <small>page.php</small>
             
             
         </section>

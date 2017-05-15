@@ -19,14 +19,14 @@
                     <?php the_title(); ?>
                 </a>
             </h2>
-
+            <p><small>Posted on <?php the_time('F j, Y')?> by <?php the_author()?> in <?php the_category()?></small></p>
 
             <?php the_content(); ?>
 
 
             <?php endwhile; endif; ?>
 
-            <small>index.php</small>
+            <small>single.php</small>
             
             
         </section>
