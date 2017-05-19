@@ -13,7 +13,7 @@
             <aside>
                 <div class="content upcoming">
                     <!-- Two Classes -->
-                    <h3><a href="improve.php">About</a></h3>
+                    <h3><a href="improve.php">Visit</a></h3>
                     <p>Lake Cavanaugh Improvement Association is a Washington non-profit association founded in 1953
                     </p>
                 </div>
@@ -41,10 +41,21 @@
         </section>
 
         <section class="water">
-            <article>
-                <h2>What makes Lake Cavanaugh so appealing?</h2>
-                <p>It's the perfect lakeside getaway - days are long, warm and lazy, in the summer. The lake is a great place to kick back and relax surrounded by natural scenery and water views.</p>
-                <a class="btn" title="" href="calendar.php">Events</a>
+            
+                <h2>About Me:</h2>
+                 <!--WP Loop-->
+
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <article id="article-<?php the_ID(); ?>" class="article"> 
+
+            <?php the_content(); ?>
+
+
+            <?php endwhile; endif; ?>
+
+            <small>front-page.php</small>
+            
+               
             </article>
 
         </section>
@@ -55,23 +66,29 @@
             <!-- First Aside -->
             <aside>
                 <div class="content">
-                    <img alt="FireDepartment" src="images/volunteer.svg">
-                    <h4>Fire Department</h4>
-                    <p>
-                        Volunteer firefighting is a very rewarding and valuable way to serve the Lake Cavanaugh Community.
-                    </p>
-                    <a title="Learn more about advertising your local business." href="fire.php">Learn more</a>
+                    <h4>Latest Articles:</h4>
+                    <ul>
+                        <?php rewind_posts(); //this will stop the previous loop ?>
+                        <?php query_posts(array('posts_per_page' => '4', 'category_name' => 'articles')); ?>
+                    <?php if (have_posts()) : while (have_posts()) : the_post();?>
+                    <li><a href="<?php the_permalink(); ?>"><?php the_title()?> <?php the_time('F jS, Y') ;?></a><?php the_category();?></li>
+                    <?php endwhile; endif;?>
+                    </ul>
+                
                 </div>
             </aside>
             <!-- Second Aside -->
             <aside>
                 <div class="content">
-                    <img alt="Advertise" src="images/advertise.svg">
-                    <h4>Advertise with Us</h4>
-                    <p>
-                        Advertising is placed on the annual Newsletter and on the website.
-                    </p>
-                    <a title="Advertise with Us" href="ad.php">Learn more</a>
+                    <h4>Latest Stories:</h4>
+                    <ul>
+                        <?php rewind_posts(); //this will stop the previous loop ?>
+                        <?php query_posts(array('posts_per_page' => '4', 'category_name' => 'stories')); ?>
+                    <?php if (have_posts()) : while (have_posts()) : the_post();?>
+                    <li><a href="<?php the_permalink(); ?>"><?php the_title()?> <?php the_time('F jS, Y') ;?></a><?php the_category();?></li>
+                    <?php endwhile; endif;?>
+                    </ul>
+                        
                 </div>
             </aside>
             <!-- Blockquotee -->
@@ -86,8 +103,6 @@
         </section>
         <!-- END HOW TO Section -->
 
-
-            <small>front-page.php</small>
             
             
         <!--END LEFT COL -->
