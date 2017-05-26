@@ -1,5 +1,55 @@
+@charset "UTF-8";
+
+/*CSS DOCUMENT*/
+
+/*
+Theme Name: lakcav01
+Author: Jeanine Mars
+Author URI: http://https://github.com/jmars84/web170
+Description: This is my theme for Spring 2017 class 170
+Version: 1.0
+*/
+
+/* WP Thumbnail Styles */
+
+section.other img {
+    border: solid 1px black;
+}
+
+
+section.other img.attachment-thumbnail {
+    float: left;
+    margin-right: 20px;
+    
+}
+
+section.other article.post-excerpt {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+section.other small {
+    padding-top:10px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+section.other img.size-large {
+    max-width: 620px;
+}
+
+section.other article.post-excerpt {
+    overflow:hidden;
+    margin-bottom: 20px;
+}
+
+
 /* Navigation */
-ul.topnav {
+
+#navigation ul li ul.sub-menu {
+    display: none;
+}
+
+#navigation ul.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -7,9 +57,9 @@ ul.topnav {
   background-color: #333;
 }
 
-ul.topnav li {float: left;}
+#navigation ul.menu li {float: left;}
 
-ul.topnav li a {
+#navigation ul.menu li a {
   display: inline-block;
   color: #f2f2f2;
   text-align: center;
@@ -19,34 +69,40 @@ ul.topnav li a {
   font-size: 17px;
 }
 
-ul.topnav li a:hover {background-color: #555;}
+#navigation ul.menu li a:hover {background-color: #555;}
 
-ul.topnav li.icon {display: none;}
+#navigation ul.menu li.icon {display: none;}
 
 @media screen and (max-width:680px) {
-  ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
+  #navigation ul.menu li:not(:first-child) {display: none;}
+  #navigation ul.menu li.icon {
     float: right;
     display: inline-block;
   }
 }
 
 @media screen and (max-width:680px) {
-  ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
+  #navigation ul.menu.responsive {position: relative;}
+  #navigation ul.menu.responsive li.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  ul.topnav.responsive li {
+  #navigation ul.menu.responsive li {
     float: none;
     display: inline;
   }
-  ul.topnav.responsive li a {
+  #navigation ul.menu.responsive li a {
     display: block;
     text-align: left;
   }
+
+     #navigation ul li ul.sub-menu {
+    display: block;
+    }
 }
+
+
 
 
 

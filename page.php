@@ -1,10 +1,7 @@
 <?php get_header()?>
 
-        
-        
-        
+             
         <!--START LEFT COL -->
-
 
         <section class="other">
 
@@ -14,6 +11,7 @@
 
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+            <article><?php the_ID(); ?></article>
             <h2>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_title(); ?>
@@ -26,12 +24,12 @@
 
             <?php endwhile; endif; ?>
 
-            <small>page.php</small>
+            <small>pages.php</small>
             
             
         </section>
         <!--END LEFT COL -->
 
-    <?php get_sidebar()?>  
+<?php get_sidebar()?>
 
-    <?php get_footer()?>  
+<?php get_footer()?>

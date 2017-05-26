@@ -97,7 +97,7 @@
                     Look deep into nature and you will understand everything better.
                 </p>
                 <p class="credit">
-                    <strong>Albert Einstien</strong> <em>~Inventor</em>
+                    <strong>Albert Einstien</strong><em>~Inventor</em>
                 </p>
             </blockquote>
         </section>
@@ -109,4 +109,4 @@
 
   
 
-    <?php get_footer()?>  
+<?php get_footer()?>
