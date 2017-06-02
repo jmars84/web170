@@ -10,6 +10,13 @@ Description: This is my theme for Spring 2017 class 170
 Version: 1.0
 */
 
+/* WP Blockquote Widget */
+
+blockquote {
+    margin-bottom: 20px;
+    
+}
+
 /* WP Thumbnail Styles */
 
 section.other img {

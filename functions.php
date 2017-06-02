@@ -8,6 +8,11 @@ Description: This is my theme for Spring 2017 class 170
 Version: 1.0
 */
 
+//Register Side bar
+register_sidebars(2, array('before_widget' => '<div id="%1$s" class="widget %2$s">', 'after_widget' => '</div>'));
+
+register_sidebar(array('name' => __('Jeanine', 'jeanine'), 'before_widget' => '<div id="%1$s" class="widget %2$s">', 'after_widget' => '</div>'));
+
 //Register My Menu Locations
 
 register_nav_menus(array('main-menu' =>__('menu')));

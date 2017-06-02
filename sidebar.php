@@ -1,9 +1,15 @@
 <!--START RIGHT COL -->
     <div id="sidebar" class="others">
     <div class="vertical-menu">
-        <h3>
         
-    <?php
+<!--Begin SubNav-->        
+    <div id="sub-navigation" class="widget">        
+        
+        <h3>
+    
+
+        
+<?php
 
         if(is_page()){
 
@@ -19,7 +25,7 @@
 
         <ul>
 
-    <?php 
+<?php
 
     if(is_page()){
 
@@ -40,9 +46,26 @@
 
     }
 
-    ?>
+?>
+    
         </ul>
         
+<!--End SubNav-->
+        </div>
+        
+<?php if(get_post_meta($post->ID, 'quote', true)) : //checks to see if it there is a quote ?>
+        <!-- Begin Pull Quote -->
+        <div id="pull-quote" class="widget">
+            <blockquote><?php echo get_post_meta($post->ID, 'quote', true); ?></blockquote>
+        </div>
+<?php endif; ?>
+        
+<!-- Begin Widgets -->        
+<?php dynamic_sidebar(1) ?> 
+<?php dynamic_sidebar(jeanine) ?>
+        
+            
+
     </div>
 </div>
 <!--END RIGHT COL -->
