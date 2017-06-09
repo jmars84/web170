@@ -3,11 +3,11 @@
 
     <head>
         <meta charset="utf-8" />
+        <title><?php get_jeanines_title_tag(); ?></title>
+        <meta name="description" content="<?php echo get_the_excerpt(); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width" />
-        <title>
-            <?php bloginfo('description');?> |
-            <?php bloginfo('name');?> | Seattle, WA</title>
+        
         <script src="js/script.js" <?php bloginfo( 'template_directory');?>
             >
         </script>
